@@ -8,6 +8,10 @@ RGS = {
     RG-name     = "Mohan2"
     RG-location = "West US2"
   }
+  RGS3 = {
+    RG-name     = "Mohan3"
+    RG-location = "West US2"
+  }
 }
 
 VNET = {
