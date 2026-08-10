@@ -1,0 +1,30 @@
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+
+- checkout: self
+
+- task: AzureCLI@2
+  displayName: Terraform Init Plan Apply
+  inputs:
+    azureSubscription: 'Azure-Terraform-Connection'
+    scriptType: bash
+    scriptLocation: inlineScript
+    workingDirectory: 'environment'
+    inlineScript: |
+
+      echo "Terraform Version"
+      terraform version
+
+      echo "Terraform Init"
+      terraform init
+
+      echo "Terraform Plan"
+      terraform plan -out=tfplan
+
+      echo "Terraform Apply"
+      terraform apply -auto-approve tfplan
