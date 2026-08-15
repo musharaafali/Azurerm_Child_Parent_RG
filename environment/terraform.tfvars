@@ -5,7 +5,7 @@ RGS = {
   }
 
   RGS2 = {
-    RG-name     = "Mohan2"
+    RG-name     = "Mohan22"
     RG-location = "West US2"
   }
 }
